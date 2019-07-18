@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akirachix</title>
+
+	<style>
+	body{
+		background-color:pink ;
+	}
+	.form{
+		margin: 0 auto;
+		border-width: 40px;
+		border: 30px solid purple;
+		padding: 30px;
+		width: 600px;
+
+	}
+	</style> 
+</head>
+
+<body>
+	<div class="form">
+
+		<h1>Teacher Registration</h1>
+		
+		<div class="output">
+    
+        	<form method="POST">{%csrf_token %}
+
+        </div>
+
+        <div class="boxes">
+
+  	    	{{form.as_p}}
+  		</div>
+  		<input type="submit"> Save</input>
+
+  		</form>
+	</div>
+	
+</body>
+</html>

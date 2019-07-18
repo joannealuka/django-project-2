@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>list_teachers</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<table class="table">
+		<div class="container">
+			<button><a href="/teacher/add">Add teacher</a></button>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Registration Number</th>
+			<th>Proffesion</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>More details</th>
+			<th>Edit details</th>
+			{% for teacher in teachers%}
+
+			<tr>
+				<td>{{teacher.first_name}}</td>
+				<td>{{teacher.last_name}}</td>
+				<td>{{teacher.registration_no}}</td>
+				<td>{{teacher.profession}}</td>
+				<td>{{teacher.phone_number}}</td>
+				<td>{{teacher.email}}</td>
+				<td><a href="/teacher/detail/{{teacher.pk}}/">More details</a></td>
+				<td><a href="/teacher/edit/{{teacher.pk}}/">Edit details</a></td>
+			</tr>
+			{% endfor %}
+		</tr>
+	</div>
+
+		
+	</table>
+
+</body>
+</html>

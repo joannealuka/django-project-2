@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student detail</title>
+	
+  
+</head>
+<body>
+	<div class ="cont">
+	<img src={{student.profile_picture.url}}>
+	<p><div class="first">first Name:</div>{{student.first_name}}</p>
+	<p><div class="registration_no">registration number:</div>{{student.registration_number}}</p>
+	<p><div class="last_name">last_name:</div>{{student.last_name}}</p>
+	<p><div class="date_of_birth">date_of_birth</div>{{date_of_birth}}</p>
+
+	</p>{{student.first_name}}
+	{{student.registration_number}}
+
+	<td><a href="/student/edit/{{student.pk}}/">Edit Details</a></td>
+	</body>
+<style type="text/css">
+
+	body{
+	background-color: purple;
+	font-family: arial;
+	font-weight: bold;
+	color: yellow;
+	}
+
+
+	margin-left: 50px;
+	margin-top: 20px;
+	}
+	.first{
+	color: yellow;
+	}
+</style>
+
+
+</body>
+</html>

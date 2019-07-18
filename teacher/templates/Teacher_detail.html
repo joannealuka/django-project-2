@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teacher detail</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class ="cont">
+	<img src={{teacher.profile_picture.url}}>
+
+	<p><div class="first">first Name:</div>{{teacher.first_name}}</p>
+	<p><div class="registration_no">registration no:</div>{{teacher.registration_no}}</p>
+	<p><div class="last_name">last_name:</div>{{teacher.last_name}}</p>
+	<p><div class="date_of_birth">date_of_birth:</div>{{date_of_birth}}</p>
+	<p><div class="phone_number">phone_number:</div>{{phone_number}}</p>
+
+
+	<td><a href="/teacher/edit/{{teacher.pk}}/">Edit Details</a></td>
+	<style type="text/css">
+
+	body{
+	background-color: purple;
+	font-family: arial;
+	font-weight: bold;
+	color: yellow;
+	}
+
+
+	margin-left: 50px;
+	margin-top: 20px;
+	}
+	.first{
+	color:yellow;
+	}
+</style>
+
+
+</body>
+</html>

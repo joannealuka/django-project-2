@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akirachix</title>
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<table class="table">
+		<div class="container">
+			<button><a href="/course/add">Add course</a></button>
+		<tr>
+			<th>Name</th>
+			<th>Duration_in_months</th>
+			<th>Course_Number</th>
+			<th>More details</th>
+			<th>Edit details</th>
+			
+			
+			{% for course in courses%}
+
+			<tr>
+				<td>{{course.name}}</td>
+				<td>{{course.duration_in_months}}</td>
+				<td>{{course.course_number}}</td>
+				<td><a href="/course/detail/{{course.pk}}/">More details</a></td>
+				<td><a href="/course/edit/{{course.pk}}/">Edit details</a></td>
+				
+				
+			</tr>
+			{% endfor %}
+		</tr>
+
+</div>
+		
+	</table>
+
+</body>
+</html>
