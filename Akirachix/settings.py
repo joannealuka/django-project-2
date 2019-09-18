@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'teacher',
     'course',
     'api',
-    'rest_framework'
+    'rest_framework',
+    'core',
 
 ]
 
@@ -126,8 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+LOGIN_REDIRECT_URL="/"
 MEDIA_ROOT = os.path.join(BASE_DIR,'student/student_image')
-
-
 MEDIA_ROOT=os.path.join(BASE_DIR,'teacher/teacher_image')
 django_heroku.settings(locals())

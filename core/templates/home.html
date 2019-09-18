@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Karibu</title>
+</head>
+<body>
+	<h1>Welcome Home</h1>
+	{% if user.is_authenticated%}
+		Welcome{{user.username}}
+		<a href="/accounts/logout/">logout</a>
+	{%else%}
+		Welcome guest
+		please<a href="/accounts/register">register</a>
+		or<a href="/accounts/login/">login</a>
+	{%endif%}
+</body>
+</html>
