@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Karibu</title><style>
+	<title>Karibu</title>
+
+</head>
+<style type="text/css">
+	
 	body{
 		background-color: pink;
+		font-size: 40px;
 	}
-	.form{
-		margin: 0 auto;
-		border-width: 40px;
-		border: 30px solid purple;
-		padding: 30px;
-		width: 600px;
-
+	h1{
+		font-family: 'Dancing Script', cursive;
+		color:#4f0807;
+		margin-left: 40%;
 	}
-	</style> 
+	h2{
+		color: white;
+		text-align: center;
+	}
 	
-	</head>
+</style>	
 <body>
-	<h1>WELCOME HOME</h1>
+	<h1
+	 >WELCOME HOME</h1>
 	{% if user.is_authenticated%}
 		Welcome{{user.username}}
 		<a href="/accounts/logout/">logout</a>
 	{%else%}
+	<h2>
 		Welcome guest
 		please <a href="/accounts/register">register</a>
-		or<a href="/accounts/login/">login</a>
+		or <a href="/accounts/login/">login</a>
 	{%endif%}
+	</h2>
+	
+	
 </body>
-</html>
