@@ -2,13 +2,16 @@ from django.shortcuts import render
 from .forms import TeacherForm
 from .models import Teacher
 from django.shortcuts import redirect
+from django.http import HttpResponseBadRequest
 
 def add_teacher(request):
 	if request.method == "POST":
 	    form = TeacherForm(request.POST)
 	    if form.is_valid():
 	    	form.save()
-	    return redirect("list_teachers")
+	    else:
+	    	return HttpResponseBadRequest()
+	    # return redirect("list_teachers")
 	else:		
 	    form=TeacherForm()
 	return render(request,"add_teacher.html",{"form":form})

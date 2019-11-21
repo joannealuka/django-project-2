@@ -1,14 +1,18 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.http import HttpResponseBadRequest
 from .forms import StudentForm
 from .models import Student
 
+
 def add_student(request):
-    if request.method == "POST":
+    if request.method =="POST":
         form = StudentForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect("list_students")
+        else:
+            return HttpResponseBadRequest()
+        # return redirect("list_students")
     else:       
         form=StudentForm()
     return render(request,"add_student.html",{"form":form})
